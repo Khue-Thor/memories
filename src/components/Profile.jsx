@@ -1,6 +1,6 @@
 import { edit, post } from "../assets";
 
-const Profile = ({ name }) => {
+const Profile = ({ name, desc, photo }) => {
   return (
     <div className="m-5 bg-black p-5 flex flex-wrap justify-between rounded-lg">
       <div className="flex gap-1">
