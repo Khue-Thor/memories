@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "./components";
+import { Header, Profile } from "./components";
 import { styles } from "./styles";
 import StarsCanvas from "./components/Stars";
 const App = () => {
@@ -9,6 +9,7 @@ const App = () => {
     >
       <div className="bg-slate-900 xl:w-[1080px] lg:w-[768px] w-[340px] pt-5 h-screen">
         <Header />
+        <Profile/>
       </div>
       <StarsCanvas />
     </div>
