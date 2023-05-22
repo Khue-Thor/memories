@@ -17,11 +17,11 @@ const Profile = ({ name, desc, photo }) => {
       <div className="flex gap-4 mt-5">
         <button className="flex bg-blue-500 rounded-md w-[140px] h-[40px] items-center justify-center opacity-90 hover:opacity-100">
           <img src={post} alt="post-icon" />
-          <span className="text-xl ml-3">Post</span>
+          <span className="text-xl ml-3 font-medium">Post</span>
         </button>
         <button className="flex bg-slate-400 gap-1 rounded-md w-[140px] h-[40px] items-center justify-center opacity-90 hover:opacity-100">
           <img src={edit} alt="post-icon" className="w-7" />
-          <span className="text-xl">Edit profile</span>
+          <span className="text-xl font-medium">Edit profile</span>
         </button>
       </div>
     </div>
