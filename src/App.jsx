@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Header, Profile, Cards, ToggleSwitch } from "./components";
+import { Header, Profile, Main, ToggleSwitch } from "./components";
 import { styles } from "./styles";
 import StarsCanvas from "./components/Stars";
 import useLocalStorage from "use-local-storage";
-import { CurrentThemeContext } from "./context/currentThem";
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useLocalStorage("theme" ? "dark" : "light");
@@ -21,7 +20,7 @@ const App = () => {
       <div className="xl:w-[1024px] lg:w-[768px] pt-5 w-[340px] min-h-screen main-app">
         <Header />
         <Profile />
-        <Cards />
+        <Main />
       </div>
       <StarsCanvas />
       <ToggleSwitch handleToggle={switchTheme} />

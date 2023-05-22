@@ -1,15 +1,18 @@
 import Header from './Header';
 import Profile from './Profile';
 import StarsCanvas from './Stars';
-import Cards from './Cards';
+import Card from './Card';
 import ToggleSwitch from './ToggleSwitch';
 import ModalWithForm from './ModalWithForm';
-import { EditProfileModal } from './EditProfileModal';
+import EditProfileModal from './EditProfileModal';
+import Main from './main';
 export {
   Header,
   Profile,
+  Main,
   StarsCanvas,
-  Cards,
+  Card,
   ToggleSwitch,
-  ModalWithForm
+  ModalWithForm,
+  EditProfileModal
 }
