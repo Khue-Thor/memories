@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Profile, Cards } from "./components";
+import { Header, Profile, Cards, ToggleSwitch } from "./components";
 import { styles } from "./styles";
 import StarsCanvas from "./components/Stars";
 const App = () => {
@@ -13,6 +13,7 @@ const App = () => {
         <Cards />
       </div>
       <StarsCanvas />
+      <ToggleSwitch />
     </div>
   );
 };
