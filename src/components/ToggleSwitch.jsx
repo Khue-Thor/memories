@@ -1,4 +1,3 @@
-import React from "react";
 import { sun, moon } from "../assets";
 const ToggleSwitch = () => {
   return (
