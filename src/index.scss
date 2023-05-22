@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+$white-primary: linear-gradient(45deg, #ff0000, #00ff00);
+$white-secondary: #aaaaaa;
+$black-100: #000;
+$slate-900: #07072c;
+
 .black-gradient {
   background-color: #b6b6b6;
 }
@@ -78,7 +83,7 @@
   bottom: 0;
   color: white;
   margin: auto;
-  background-color: #ffffff;
+  background-color: $slate-900;
   transition: 0.2s;
   border-radius: 50%;
 }
@@ -90,32 +95,58 @@
 
 .toggleswitch__input:checked + .toggleswitch__slider:before {
   transform: translateY(29px);
-  background-color: #000000;
+  background-color: #ffffff;
 }
+
+// @media (prefers-color-scheme: dark) {
+//   .app {
+//   }
+
+//   .black-gradient {
+//     background: #000000; /* fallback for old browsers */
+//     background: -webkit-linear-gradient(
+//       to right,
+//       #032837,
+//       #0c0527,
+//       #030313,
+//       #032837
+//     ); /* Chrome 10-25, Safari 5.1-6 */
+//     background: linear-gradient(
+//       to right,
+//       #032837,
+//       #060217,
+//       #030313,
+//       #032837
+//     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+//   }
+
+//   .star {
+//     visibility: visible;
+//   }
+// }
 
 .star {
   visibility: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  .black-gradient {
-    background: #000000; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #032837,
-      #0c0527,
-      #030313,
-      #032837
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #032837,
-      #060217,
-      #030313,
-      #032837
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
+:root {
+  --background-primary: $white-primary;
+  --text-primary: $black-100;
+}
+
+[data-theme="dark"] {
+  --background-primary: #03354c;
+  --text-primary: $white-primary;
   .star {
     visibility: visible;
   }
+}
+
+.app {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.main-app {
+  background-color: var(--background-secondary);
 }

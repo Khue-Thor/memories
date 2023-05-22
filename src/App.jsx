@@ -3,24 +3,28 @@ import { Header, Profile, Cards, ToggleSwitch } from "./components";
 import { styles } from "./styles";
 import StarsCanvas from "./components/Stars";
 import useLocalStorage from "use-local-storage";
+import { CurrentThemeContext } from "./context/currentThem";
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState("dark");
+  const [currentTheme, setCurrentTheme] = useLocalStorage("theme" ? "dark" : "light");
 
-  const handleThemeToggle = () => {
-    setCurrentTheme(true);
+  const switchTheme = () => {
+    const newTheme = currentTheme === "light" ? "dark" : "light";
+    setCurrentTheme(newTheme);
   };
+
   return (
     <div
-      className={`${styles.padding} z-0 relative black-gradient flex justify-start flex-col items-center`}
+      className={`${styles.padding} z-0 relative app black-gradient flex justify-start flex-col items-center`}
+      data-theme={currentTheme}
     >
-      <div className="bg-slate-900 xl:w-[1024px] lg:w-[768px] w-[340px] pt-5 min-h-screen">
+      <div className="xl:w-[1024px] lg:w-[768px] w-[340px] pt-5 min-h-screen bg-slate-900">
         <Header />
         <Profile />
         <Cards />
       </div>
       <StarsCanvas />
-      <ToggleSwitch handleToggle={handleThemeToggle} />
+      <ToggleSwitch handleToggle={switchTheme} />
     </div>
   );
 };

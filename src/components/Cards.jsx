@@ -6,12 +6,12 @@ const Cards = () => {
       <div className="w-[320px] h-[420px] bg-slate-600 rounded-xl overflow-hidden">
         <div className="h-[256px] relative">
           <img src={waterfall} alt="" className="h-[310px] w-[320px]" />
-          <div className="text-white absolute top-3 left-3">
+          <div className="absolute top-3 left-3">
             <h3 className="text-xl">Mark</h3>
             <p>2 months</p>
           </div>
         </div>
-        <div className="text-white mt-[70px] ml-2">
+        <div className="mt-[70px] ml-2">
           <h2 className=" text-3xl">Waterfall</h2>
           <p>#waterfall</p>
           <div className="flex justify-between">
