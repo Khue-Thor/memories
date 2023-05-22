@@ -3,21 +3,7 @@
 @tailwind utilities;
 
 .black-gradient {
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #032837,
-    #0c0527,
-    #030313,
-    #032837
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #032837,
-    #060217,
-    #030313,
-    #032837
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #b6b6b6;
 }
 
 .toggleswitch__container {
@@ -105,4 +91,31 @@
 .toggleswitch__input:checked + .toggleswitch__slider:before {
   transform: translateY(29px);
   background-color: #000000;
+}
+
+.star {
+  visibility: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  .black-gradient {
+    background: #000000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #032837,
+      #0c0527,
+      #030313,
+      #032837
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #032837,
+      #060217,
+      #030313,
+      #032837
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .star {
+    visibility: visible;
+  }
 }
