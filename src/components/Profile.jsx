@@ -16,11 +16,11 @@ const Profile = ({ name }) => {
         </div>
       </div>
       <div className="flex gap-4 mt-5">
-        <button className="flex bg-blue-500 rounded-md w-[140px] h-[40px] items-center justify-center">
+        <button className="flex bg-blue-500 rounded-md w-[140px] h-[40px] items-center justify-center opacity-90 hover:opacity-100">
           <img src={post} alt="post-icon" />
           <span className="text-white text-xl ml-3">Post</span>
         </button>
-        <button className="flex bg-slate-400 gap-1 rounded-md w-[140px] h-[40px] items-center justify-center">
+        <button className="flex bg-slate-400 gap-1 rounded-md w-[140px] h-[40px] items-center justify-center opacity-90 hover:opacity-100">
           <img src={edit} alt="post-icon" className="w-7" />
           <span className="text-white text-xl">Edit profile</span>
         </button>
