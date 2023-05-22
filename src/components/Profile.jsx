@@ -2,7 +2,7 @@ import { edit, post } from "../assets";
 
 const Profile = ({ name, desc, photo }) => {
   return (
-    <div className="m-5 bg-black p-5 flex flex-wrap justify-between rounded-lg">
+    <div className="m-5 profile p-5 flex flex-wrap justify-between rounded-lg">
       <div className="flex gap-1">
         <img
           className="w-[80px] h-[80px] bg-white rounded-full items-center"
