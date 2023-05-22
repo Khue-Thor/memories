@@ -94,7 +94,6 @@ $slate-900: #07072c;
   transform: translateY(29px);
   background-color: #585fc0;
 }
-
 // @media (prefers-color-scheme: dark) {
 //   .app {
 //   }
@@ -130,6 +129,8 @@ $slate-900: #07072c;
   --background-primary: #f2f2f2;
   --background-secondary: #ffffff;
   --background-profile: #f0f1f4;
+  --background-card: #fafafa;
+  --border-color: $slate-900;
   --box-shadow: rgba(0, 0, 0, 0.3);
   --text-primary: $black-100;
 }
@@ -138,18 +139,13 @@ $slate-900: #07072c;
   --background-primary: #03354c;
   --background-secondary: #07132b;
   --background-profile: #213e59;
+  --background-card: #44525f;
+  --border-color: #fff;
   --box-shadow: rgba(11, 62, 105, 0.3);
   --text-primary: #fff;
   .star {
     visibility: visible;
   }
-}
-
-h1,
-h2,
-p,
-span {
-  color: var(--text-primary);
 }
 
 .app {
@@ -162,6 +158,18 @@ span {
   box-shadow: 1px 2px 10px 1px var(--box-shadow);
 }
 
+.header {
+  background-color: #03354c;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px var(--border-color) solid;
+}
+
 .profile {
   background-color: var(--background-profile);
+  box-shadow: 1px 2px 10px 1px var(--box-shadow);
+}
+
+.card {
+  background-color: var(--background-card);
+  box-shadow: 1px 2px 10px 1px var(--box-shadow);
 }

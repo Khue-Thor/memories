@@ -18,7 +18,7 @@ const App = () => {
       className={`${styles.padding} z-0 relative app black-gradient flex justify-start flex-col items-center`}
       data-theme={currentTheme}
     >
-      <div className="xl:w-[1024px] lg:w-[768px] w-[340px] pt-5 min-h-screen main-app">
+      <div className="xl:w-[1024px] lg:w-[768px] pt-5 w-[340px] min-h-screen main-app">
         <Header />
         <Profile />
         <Cards />

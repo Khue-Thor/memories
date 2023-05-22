@@ -3,7 +3,7 @@ import { waterfall } from "../assets";
 const Cards = () => {
   return (
     <div className="flex flex-wrap gap-4 m-4">
-      <div className="w-[320px] h-[420px] bg-slate-600 rounded-xl overflow-hidden">
+      <div className="w-[320px] h-[420px] card rounded-xl overflow-hidden">
         <div className="h-[256px] relative">
           <img src={waterfall} alt="" className="h-[310px] w-[320px]" />
           <div className="absolute top-3 left-3">
