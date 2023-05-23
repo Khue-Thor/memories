@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Header, Profile, Main, ToggleSwitch } from "./components";
+import { Header, Profile, Main, ToggleSwitch, EditProfileModal } from "./components";
 import { styles } from "./styles";
 import StarsCanvas from "./components/Stars";
 import useLocalStorage from "use-local-storage";
@@ -24,6 +24,7 @@ const App = () => {
       </div>
       <StarsCanvas />
       <ToggleSwitch handleToggle={switchTheme} />
+      <EditProfileModal/>
     </div>
   );
 };
