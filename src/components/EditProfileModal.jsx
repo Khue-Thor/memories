@@ -16,9 +16,9 @@ const EditProfileModal = ({ isOpen, isLoading, onEditProfile, onCloseModal }) =>
       closeModal={onCloseModal}
       onSubmit={handleSubmit}
     >
-      <fieldset className="flex flex-col w-[440px]">
+      <fieldset className="flex flex-col w-[420px] mb-8 gap-3">
         <label>Name</label>
-        <input type="text" placeholder="Your name"/>
+        <input type="text" placeholder="Your name" className="text-black"/>
         <label>Description</label>
         <input type="text" placeholder="Description"/>
         <label>Picture</label>
