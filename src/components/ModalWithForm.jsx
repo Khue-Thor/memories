@@ -6,8 +6,8 @@ function ModalWithForm({ title, name, buttonText, closeModal, onSubmit, children
     onSubmit();
   }
   return (
-    <div className="fixed top-0 left-0 right-0 bottom-0 bg-opacity-40 bg-black w-full">
-      <div className="modal w-[320px] bg-opacity-40 bg-blue-900 rounded-2xl p-3">
+    <div className="fixed top-0 left-0 right-0 bottom-0 bg-opacity-40 bg-black w-full flex justify-center items-center">
+      <div className="modal w-[440px] bg-opacity-40 bg-blue-900 rounded-2xl p-3 h-[400px]">
         <div className="">
           <h2 className="">{title}</h2>
           <button className="modal__close" type="button" onClick={closeModal} />
