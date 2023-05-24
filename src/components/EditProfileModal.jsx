@@ -21,6 +21,8 @@ const EditProfileModal = ({ isOpen, isLoading, onEditProfile, onCloseModal }) =>
         <input type="text" placeholder="Your name"/>
         <label>Description</label>
         <input type="text" placeholder="Description"/>
+        <label>Picture</label>
+        <input type="text" placeholder="Picture URL"/>
       </fieldset>
     </ModalWithForm>
   );
