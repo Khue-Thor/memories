@@ -1,6 +1,6 @@
 import { edit, post } from "../assets";
 
-const Profile = ({ name, desc, photo }) => {
+const Profile = ({ name, desc, photo, onEditModal }) => {
   return (
     <div className="m-5 profile p-5 flex flex-wrap justify-between rounded-lg">
       <div className="flex gap-4">
@@ -19,7 +19,10 @@ const Profile = ({ name, desc, photo }) => {
           <img src={post} alt="post-icon" />
           <span className="text-xl ml-3 font-medium">Post</span>
         </button>
-        <button className="flex bg-slate-400 gap-1 rounded-md w-[140px] h-[40px] items-center justify-center opacity-90 hover:opacity-100">
+        <button
+          className="flex bg-slate-400 gap-1 rounded-md w-[140px] h-[40px] items-center justify-center opacity-90 hover:opacity-100"
+          onClick={onEditModal}
+        >
           <img src={edit} alt="post-icon" className="w-7" />
           <span className="text-xl font-medium">Edit profile</span>
         </button>
