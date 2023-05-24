@@ -9,7 +9,11 @@ const App = () => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
   const handleEditModalOpen = () => {
-    setIsEditModalOpen(true)
+    setIsEditModalOpen(true);
+  }
+
+  const handleModalClose = () => {
+    setIsEditModalOpen(false);
   }
 
   const switchTheme = () => {
@@ -29,7 +33,7 @@ const App = () => {
       </div>
       <StarsCanvas />
       <ToggleSwitch handleToggle={switchTheme} />
-      {isEditModalOpen && <EditProfileModal />}
+      {isEditModalOpen && <EditProfileModal onCloseModal={handleModalClose}/>}
     </div>
   );
 };
