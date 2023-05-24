@@ -178,3 +178,13 @@ $slate-900: #07072c;
   background-color: var(--background-card);
   box-shadow: 1px 2px 10px 1px var(--box-shadow);
 }
+
+.modal__input {
+  background: none;
+  border-bottom: 1px #ffffff solid;
+}
+
+.modal__label{
+  font-weight: bold;
+  margin: 0 0 3px 0;
+}

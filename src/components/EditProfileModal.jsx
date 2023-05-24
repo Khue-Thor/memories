@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import ModalWithForm from "./ModalWithForm";
 
 const EditProfileModal = ({ isOpen, isLoading, onEditProfile, onCloseModal }) => {
@@ -7,7 +7,6 @@ const EditProfileModal = ({ isOpen, isLoading, onEditProfile, onCloseModal }) =>
 
   function handleSubmit(e) {
     onEditProfile(name, avatar);
-  
   }
   return (
     <ModalWithForm
@@ -16,13 +15,17 @@ const EditProfileModal = ({ isOpen, isLoading, onEditProfile, onCloseModal }) =>
       closeModal={onCloseModal}
       onSubmit={handleSubmit}
     >
-      <fieldset className="flex flex-col w-[420px] mb-8 gap-3">
-        <label>Name</label>
-        <input type="text" placeholder="Your name" className="text-black"/>
-        <label>Description</label>
-        <input type="text" placeholder="Description"/>
-        <label>Picture</label>
-        <input type="text" placeholder="Picture URL"/>
+      <fieldset className="flex flex-col w-[420px] mb-8">
+        <label className="modal__label">Name</label>
+        <input type="text" placeholder="Your name" className="modal__input mb-5" />
+        <label className="modal__label">Description</label>
+        <input
+          type="text"
+          placeholder="Short description"
+          className="modal__input mb-5"
+        />
+        <label className="modal__label">Picture</label>
+        <input type="text" placeholder="Picture URL" className="modal__input" />
       </fieldset>
     </ModalWithForm>
   );
