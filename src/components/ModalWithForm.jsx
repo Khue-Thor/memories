@@ -6,10 +6,10 @@ function ModalWithForm({ title, name, buttonText, closeModal, onSubmit, children
     onSubmit();
   }
   return (
-    <div className="modal">
-      <div className="modal__container modal__content">
-        <div className="modal__form-header">
-          <h2 className="modal__form-title">{title}</h2>
+    <div className="fixed top-0 left-0 right-0 bottom-0 bg-opacity-40 bg-black w-full">
+      <div className="modal w-[320px]">
+        <div className="">
+          <h2 className="">{title}</h2>
           <button className="modal__close" type="button" onClick={closeModal} />
         </div>
         <form className={`modal__form modal__form-${name}`} onSubmit={handleSubmit}>
