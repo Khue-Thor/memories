@@ -19,6 +19,8 @@ const EditProfileModal = ({ isOpen, isLoading, onEditProfile, onCloseModal }) =>
       <fieldset className="flex flex-col">
         <label>Name</label>
         <input type="text" placeholder="Your name"/>
+        <label>Description</label>
+        <input type="text" placeholder="Description"/>
       </fieldset>
     </ModalWithForm>
   );
