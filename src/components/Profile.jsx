@@ -10,8 +10,8 @@ const Profile = ({ name, desc, photo, onEditModal }) => {
           alt="profile-image"
         />
         <div className="flex flex-col">
-          <h1 className="xl:text-4xl text-3xl font-medium">Giny Rola</h1>
-          <p>Web Developer</p>
+          <h1 className="xl:text-4xl text-3xl font-medium">{name}</h1>
+          <p>{desc}</p>
         </div>
       </div>
       <div className="flex gap-4 mt-5">

@@ -28,7 +28,7 @@ const App = () => {
     >
       <div className="xl:w-[1024px] lg:w-[768px] pt-5 w-[340px] min-h-screen main-app">
         <Header />
-        <Profile onEditModal={handleEditModalOpen}/>
+        <Profile onEditModal={handleEditModalOpen} name={"name"}/>
         <Main />
       </div>
       <StarsCanvas />
