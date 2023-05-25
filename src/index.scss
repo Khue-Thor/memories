@@ -91,35 +91,9 @@ $slate-900: #07072c;
 }
 
 .toggleswitch__input:checked + .toggleswitch__slider:before {
-  transform: translateY(29px);
+  transform: translateY(25px);
   background-color: #ffa339;
 }
-// @media (prefers-color-scheme: dark) {
-//   .app {
-//   }
-
-//   .black-gradient {
-//     background: #000000; /* fallback for old browsers */
-//     background: -webkit-linear-gradient(
-//       to right,
-//       #032837,
-//       #0c0527,
-//       #030313,
-//       #032837
-//     ); /* Chrome 10-25, Safari 5.1-6 */
-//     background: linear-gradient(
-//       to right,
-//       #032837,
-//       #060217,
-//       #030313,
-//       #032837
-//     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-//   }
-
-//   .star {
-//     visibility: visible;
-//   }
-// }
 
 .star {
   visibility: hidden;
@@ -184,7 +158,7 @@ $slate-900: #07072c;
   border-bottom: 1px #ffffff solid;
 }
 
-.modal__label{
+.modal__label {
   font-weight: bold;
   margin: 0 0 3px 0;
 }

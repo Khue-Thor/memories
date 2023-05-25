@@ -32,7 +32,7 @@ const App = () => {
         <Main />
       </div>
       <StarsCanvas />
-      <ToggleSwitch handleToggle={switchTheme} />
+      <ToggleSwitch handleToggle={switchTheme}/>
       {isEditModalOpen && <EditProfileModal onCloseModal={handleModalClose}/>}
     </div>
   );

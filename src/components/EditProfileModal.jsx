@@ -17,15 +17,15 @@ const EditProfileModal = ({ isOpen, isLoading, onEditProfile, onCloseModal }) =>
     >
       <fieldset className="flex flex-col w-[420px] mb-8">
         <label className="modal__label">Name</label>
-        <input type="text" placeholder="Your name" className="modal__input mb-5" />
+        <input type="text" placeholder="Your name" className="modal__input mb-5 p-1" />
         <label className="modal__label">Description</label>
         <input
           type="text"
           placeholder="Short description"
-          className="modal__input mb-5"
+          className="modal__input mb-5 p-1"
         />
         <label className="modal__label">Picture</label>
-        <input type="text" placeholder="Picture URL" className="modal__input" />
+        <input type="text" placeholder="Picture URL" className="modal__input p-1" />
       </fieldset>
     </ModalWithForm>
   );
