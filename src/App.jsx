@@ -7,6 +7,7 @@ import useLocalStorage from "use-local-storage";
 const App = () => {
   const [currentTheme, setCurrentTheme] = useLocalStorage("theme" ? "dark" : "light");
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [name, setName] = useState()
 
   const handleEditModalOpen = () => {
     setIsEditModalOpen(true);
