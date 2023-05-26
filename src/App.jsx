@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Header, Profile, Main, ToggleSwitch, EditProfileModal } from "./components";
+import { Header, Profile, Main, ToggleSwitch, EditProfileModal, CardModal } from "./components";
 import { styles } from "./styles";
 import StarsCanvas from "./components/Stars";
 import useLocalStorage from "use-local-storage";
@@ -7,15 +7,15 @@ import useLocalStorage from "use-local-storage";
 const App = () => {
   const [currentTheme, setCurrentTheme] = useLocalStorage("theme" ? "dark" : "light");
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
-  const [name, setName] = useState()
+  const [name, setName] = useState();
 
   const handleEditModalOpen = () => {
     setIsEditModalOpen(true);
-  }
+  };
 
   const handleModalClose = () => {
     setIsEditModalOpen(false);
-  }
+  };
 
   const switchTheme = () => {
     const newTheme = currentTheme === "light" ? "dark" : "light";
@@ -29,12 +29,13 @@ const App = () => {
     >
       <div className="xl:w-[1024px] lg:w-[768px] pt-5 w-[340px] min-h-screen main-app">
         <Header />
-        <Profile onEditModal={handleEditModalOpen} name={"name"}/>
+        <Profile onEditModal={handleEditModalOpen} name={"name"} />
         <Main />
       </div>
       <StarsCanvas />
-      <ToggleSwitch handleToggle={switchTheme}/>
-      {isEditModalOpen && <EditProfileModal onCloseModal={handleModalClose}/>}
+      <ToggleSwitch handleToggle={switchTheme} />
+      {isEditModalOpen && <EditProfileModal onCloseModal={handleModalClose} />}
+      <CardModal />
     </div>
   );
 };
