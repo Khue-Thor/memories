@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import ModalWithForm from "./ModalWithForm";
 
-const CardModal = ({ isLoading, onCloseModal, onAddCard }) => {
+const CardAddModal = ({ isLoading, onCloseModal, onAddCard }) => {
   function handleSubmit() {
     onAddCard(title, tags, descript, image);
   }
@@ -55,4 +55,4 @@ const CardModal = ({ isLoading, onCloseModal, onAddCard }) => {
   );
 };
 
-export default CardModal;
+export default CardAddModal;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Header, Profile, Main, ToggleSwitch, EditProfileModal, CardModal } from "./components";
+import { Header, Profile, Main, ToggleSwitch, EditProfileModal, CardAddModal } from "./components";
 import { styles } from "./styles";
 import StarsCanvas from "./components/Stars";
 import useLocalStorage from "use-local-storage";
@@ -38,7 +38,7 @@ const App = () => {
       <StarsCanvas />
       <ToggleSwitch handleToggle={switchTheme} />
       {isEditModalOpen && <EditProfileModal onCloseModal={handleModalClose} />}
-      {isCardAddModalOpen && <CardModal onCloseModal={handleModalClose} />}
+      {isCardAddModalOpen && <CardAddModal onCloseModal={handleModalClose} />}
     </div>
   );
 };
