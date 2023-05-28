@@ -7,6 +7,7 @@ import ToggleSwitch from './ToggleSwitch';
 import ModalWithForm from './ModalWithForm';
 import EditProfileModal from './EditProfileModal';
 import CardAddModal from './CardAddModal';
+import CardModal from './CardModal';
 export {
   Header,
   Profile,
@@ -16,5 +17,6 @@ export {
   ToggleSwitch,
   ModalWithForm,
   EditProfileModal,
-  CardAddModal
+  CardAddModal,
+  CardModal
 }

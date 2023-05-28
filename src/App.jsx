@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Header, Profile, Main, ToggleSwitch, EditProfileModal, CardAddModal } from "./components";
+import {
+  Header,
+  Profile,
+  Main,
+  ToggleSwitch,
+  EditProfileModal,
+  CardAddModal,
+  CardModal,
+} from "./components";
 import { styles } from "./styles";
 import StarsCanvas from "./components/Stars";
 import useLocalStorage from "use-local-storage";
