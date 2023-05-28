@@ -20,6 +20,8 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard }) => {
           required
           name="name"
           id="name"
+          minLength="1"
+          maxLength="30"
         />
 
         <label className="modal__label">Tags</label>
@@ -30,6 +32,8 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard }) => {
           required
           name="description"
           id="description"
+          minLength="1"
+          maxLength="30"
         />
 
         <label className="modal__label">Description</label>
@@ -40,11 +44,13 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard }) => {
           required
           name="description"
           id="description"
+          minLength="1"
+          maxLength="200"
         />
 
         <label className="modal__label">Picture</label>
         <input
-          type="text"
+          type="url"
           placeholder="Picture URL"
           className="modal__input p-1 mb-5"
           name="avatar"

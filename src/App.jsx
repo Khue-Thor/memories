@@ -22,8 +22,11 @@ const App = () => {
   const handleModalOpen = () => {
     setIsEditModalOpen(true);
     setIsCardAddModalOpen(true);
-    setIsCardModalOpen(true);
   };
+
+  const handleCardModalOpen = () => {
+    setIsCardModalOpen(true);
+  }
 
   const handleModalClose = () => {
     setIsEditModalOpen(false);
@@ -44,7 +47,7 @@ const App = () => {
       <div className="xl:w-[1024px] lg:w-[768px] pt-5 w-[340px] min-h-screen main-app">
         <Header />
         <Profile onEditModal={handleModalOpen} onAddmodal={handleModalOpen} name={"name"} />
-        <Main onCardClick={handleModalOpen} />
+        <Main onCardClick={handleCardModalOpen} />
       </div>
       <StarsCanvas />
       <ToggleSwitch handleToggle={switchTheme} />
