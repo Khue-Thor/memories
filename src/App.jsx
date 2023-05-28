@@ -16,11 +16,13 @@ const App = () => {
   const [currentTheme, setCurrentTheme] = useLocalStorage("theme" ? "dark" : "light");
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isCardAddModalOpen, setIsCardAddModalOpen] = useState(false);
+  const [isCardModalOpen, setIsCardModalOpen] = useState(false);
   const [name, setName] = useState();
 
   const handleModalOpen = () => {
     setIsEditModalOpen(true);
     setIsCardAddModalOpen(true);
+    setIsCardModalOpen(true);
   };
 
   const handleModalClose = () => {
@@ -41,12 +43,13 @@ const App = () => {
       <div className="xl:w-[1024px] lg:w-[768px] pt-5 w-[340px] min-h-screen main-app">
         <Header />
         <Profile onEditModal={handleModalOpen} onAddmodal={handleModalOpen} name={"name"} />
-        <Main />
+        <Main onCardClick={handleModalOpen} />
       </div>
       <StarsCanvas />
       <ToggleSwitch handleToggle={switchTheme} />
       {isEditModalOpen && <EditProfileModal onCloseModal={handleModalClose} />}
       {isCardAddModalOpen && <CardAddModal onCloseModal={handleModalClose} />}
+      {isCardModalOpen && <CardModal />}
     </div>
   );
 };
