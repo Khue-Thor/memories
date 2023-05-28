@@ -1,7 +1,7 @@
 import React from "react";
 import { waterfall } from "../assets";
 import { XCircleFill } from "react-bootstrap-icons";
-const CardModal = ({ desc, closeModal }) => {
+const CardModal = ({ title, desc, closeModal }) => {
   return (
     <div className="fixed top-0 left-0 right-0 bottom-0 bg-opacity-40 bg-black w-full flex justify-center items-center">
       <div className="lg:w-[850px] lg:h-[640px] bg-red-500 card flex overflow-hidden rounded-xl relative">
@@ -12,6 +12,7 @@ const CardModal = ({ desc, closeModal }) => {
           <img src={waterfall} className="lg:w-[520px] lg:h-[640px]" />
         </div>
         <div className="lg:w-[330px] m-[10px]">
+          <h2 className=" text-4xl font-medium pb-2">{title}Waterfall</h2>
           <p>
             {desc}
             picture. / (ˈpɪktʃə) / noun. a visual representation of something, such as a person or
