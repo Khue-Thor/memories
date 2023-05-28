@@ -2,7 +2,10 @@ import React from "react";
 import { waterfall } from "../assets";
 const Card = ({ card, onCardClick, onRemoveClick, onLikeClick }) => {
   return (
-    <div className="w-[320px] h-[420px] card rounded-xl overflow-hidden mb-5">
+    <div
+      className="w-[320px] h-[420px] card rounded-xl overflow-hidden mb-5 cursor-pointer"
+      onClick={onCardClick}
+    >
       <div className="h-[256px] relative">
         <img src={waterfall} alt="" className="h-[310px] w-[320px]" />
         <div className="absolute top-3 left-3">

@@ -28,6 +28,7 @@ const App = () => {
   const handleModalClose = () => {
     setIsEditModalOpen(false);
     setIsCardAddModalOpen(false);
+    setIsCardModalOpen(false);
   };
 
   const switchTheme = () => {
@@ -49,8 +50,8 @@ const App = () => {
       <ToggleSwitch handleToggle={switchTheme} />
       {isEditModalOpen && <EditProfileModal onCloseModal={handleModalClose} />}
       {isCardAddModalOpen && <CardAddModal onCloseModal={handleModalClose} />}
-      {isCardModalOpen && <CardModal />}
-      <CardModal />
+      {isCardModalOpen && <CardModal closeModal={handleModalClose}/>}
+     
     </div>
   );
 };
