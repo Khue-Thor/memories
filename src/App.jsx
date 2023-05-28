@@ -50,6 +50,7 @@ const App = () => {
       {isEditModalOpen && <EditProfileModal onCloseModal={handleModalClose} />}
       {isCardAddModalOpen && <CardAddModal onCloseModal={handleModalClose} />}
       {isCardModalOpen && <CardModal />}
+      <CardModal />
     </div>
   );
 };
