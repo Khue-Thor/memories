@@ -1,12 +1,10 @@
 import React from "react";
 import { waterfall } from "../assets";
+import { HandThumbsUp } from "react-bootstrap-icons";
 const Card = ({ card, onCardClick, onRemoveClick, onLikeClick }) => {
   return (
-    <div
-      className="w-[320px] h-[420px] card rounded-xl overflow-hidden mb-5 cursor-pointer"
-      onClick={onCardClick}
-    >
-      <div className="h-[256px] relative">
+    <div className="w-[320px] h-[420px] card rounded-xl overflow-hidden mb-5">
+      <div className="h-[256px] relative cursor-pointer" onClick={onCardClick}>
         <img src={waterfall} alt="" className="h-[310px] w-[320px]" />
         <div className="absolute top-3 left-3">
           <h3 className="text-xl">Mark</h3>
@@ -19,6 +17,7 @@ const Card = ({ card, onCardClick, onRemoveClick, onLikeClick }) => {
         <div className="flex justify-between">
           <button className="like-bg"></button>
         </div>
+        <HandThumbsUp />
       </div>
     </div>
   );
