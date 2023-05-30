@@ -19,10 +19,14 @@ const App = () => {
   const [isCardModalOpen, setIsCardModalOpen] = useState(false);
   const [name, setName] = useState();
 
-  const handleModalOpen = () => {
+  const handleEditModalOpen = () => {
     setIsEditModalOpen(true);
-    setIsCardAddModalOpen(true);
+
   };
+
+  const handleAddCardOpen = () => {
+    setIsCardAddModalOpen(true);
+  }
 
   const handleCardModalOpen = () => {
     setIsCardModalOpen(true);
@@ -46,7 +50,7 @@ const App = () => {
     >
       <div className="xl:w-[1024px] lg:w-[768px] pt-5 w-[340px] min-h-screen main-app">
         <Header />
-        <Profile onEditModal={handleModalOpen} onAddmodal={handleModalOpen} name={"name"} />
+        <Profile onEditModal={handleEditModalOpen} onAddmodal={handleAddCardOpen} name={"name"} />
         <Main onCardClick={handleCardModalOpen} />
       </div>
       <StarsCanvas />
