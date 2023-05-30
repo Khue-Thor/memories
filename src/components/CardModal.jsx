@@ -9,16 +9,21 @@ const CardModal = ({ title, desc, closeModal }) => {
           <XCircleFill className="w-5 h-5" />
         </button>
         <div className="h-[640px]">
-          <img src={waterfall} className="lg:w-[520px] lg:h-[640px]" />
+          <img src={waterfall} className="lg:w-[520px] lg:h-[640px]" alt="image" />
         </div>
         <div className="lg:w-[330px] m-[10px]">
+          <div className="flex items-center gap-2 mb-3">
+            <img className="w-12 h-12 bg-black rounded-full border-2" alt="profile-image" />
+            <h2 className="text-2xl font-bold">Mark</h2>
+          </div>
           <h2 className=" text-4xl font-medium pb-2">{title}Waterfall</h2>
           <p>
             {desc}
-            picture. / (ˈpɪktʃə) / noun. a visual representation of something, such as a person or
-            scene, produced on a surface, as in a photograph, painting, etc. (as modifier)picture
-            gallery; picture postcard Related adjective: pictorial.
+            picture a visual representation of something, such as a person or scene, produced on a
+            surface, as in a photograph, painting, etc. (as modifier)picture gallery; picture
+            postcard Related adjective: pictorial.
           </p>
+          <p>#waterfall</p>
         </div>
       </div>
     </div>

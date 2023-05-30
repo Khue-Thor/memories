@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { waterfall } from "../assets";
-import { HandThumbsUp, HandThumbsUpFill } from "react-bootstrap-icons";
+import { HandThumbsUp, HandThumbsUpFill, ThreeDots } from "react-bootstrap-icons";
 import LikeChoicesModal from "./LikeChoicesModal";
 const Card = ({ card, onCardClick, onRemoveClick, onLikeClick, onLikeHover }) => {
   const [isLiked, setIsLiked] = useState(false);
@@ -25,12 +25,18 @@ const Card = ({ card, onCardClick, onRemoveClick, onLikeClick, onLikeHover }) =>
         <div className="flex justify-between">
           <button className="like-bg"></button>
         </div>
-        {isLiked ? (
-          <HandThumbsUpFill className="w-7 h-7 mt-2 cursor-pointer" onClick={handleDisliked} />
-        ) : (
-          <HandThumbsUp className="w-7 h-7 mt-2 cursor-pointer" onClick={handleLikeToggle} onMouseOver={onLikeHover}/>
-        )}
-       
+        <div className="flex items-center gap-3 mt-2">
+          {isLiked ? (
+            <HandThumbsUpFill className="w-7 h-7 cursor-pointer" onClick={handleDisliked} />
+          ) : (
+            <HandThumbsUp
+              className="w-7 h-7 cursor-pointer"
+              onClick={handleLikeToggle}
+              onMouseOver={onLikeHover}
+            />
+          )}
+          <ThreeDots className="w-7 h-7 cursor-pointer" />
+        </div>
       </div>
     </div>
   );
