@@ -11,6 +11,7 @@ import {
 import { styles } from "./styles";
 import StarsCanvas from "./components/Stars";
 import useLocalStorage from "use-local-storage";
+import { profileimage } from "./assets";
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useLocalStorage("theme" ? "dark" : "light");
@@ -21,16 +22,15 @@ const App = () => {
 
   const handleEditModalOpen = () => {
     setIsEditModalOpen(true);
-
   };
 
   const handleAddCardOpen = () => {
     setIsCardAddModalOpen(true);
-  }
+  };
 
   const handleCardModalOpen = () => {
     setIsCardModalOpen(true);
-  }
+  };
 
   const handleModalClose = () => {
     setIsEditModalOpen(false);
@@ -74,15 +74,20 @@ const App = () => {
     >
       <div className="xl:w-[1024px] lg:w-[768px] pt-5 w-[340px] min-h-screen main-app">
         <Header />
-        <Profile onEditModal={handleEditModalOpen} onAddmodal={handleAddCardOpen} name={"name"} />
+        <Profile
+          onEditModal={handleEditModalOpen}
+          onAddmodal={handleAddCardOpen}
+          name={"Alitatuma"}
+          desc={"Indain Model"}
+          photo={profileimage}
+        />
         <Main onCardClick={handleCardModalOpen} />
       </div>
       <StarsCanvas />
       <ToggleSwitch handleToggle={switchTheme} />
       {isEditModalOpen && <EditProfileModal onCloseModal={handleModalClose} />}
       {isCardAddModalOpen && <CardAddModal onCloseModal={handleModalClose} />}
-      {isCardModalOpen && <CardModal closeModal={handleModalClose}/>}
-     
+      {isCardModalOpen && <CardModal closeModal={handleModalClose} />}
     </div>
   );
 };
