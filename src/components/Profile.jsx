@@ -15,12 +15,12 @@ const Profile = ({ name, desc, photo, onEditModal, onAddmodal }) => {
         </div>
       </div>
       <div className="flex gap-4 mt-5">
-        <button className="flex bg-blue-500 rounded-md w-[140px] h-[40px] items-center justify-center opacity-90 hover:opacity-100" onClick={onAddmodal}>
+        <button className="flex bg-blue-500 rounded-md w-[100px] lg:w-[140px] h-[40px] items-center justify-center opacity-90 hover:opacity-100" onClick={onAddmodal}>
           <img src={post} alt="post-icon" />
           <span className="text-xl ml-3 font-medium">Post</span>
         </button>
         <button
-          className="flex bg-slate-400 gap-1 rounded-md w-[140px] h-[40px] items-center justify-center opacity-90 hover:opacity-100"
+          className="flex bg-slate-400 gap-1 rounded-md w-[140px] md:w-[140px] h-[40px] items-center justify-center opacity-90 hover:opacity-100"
           onClick={onEditModal}
         >
           <img src={edit} alt="post-icon" className="w-7" />
