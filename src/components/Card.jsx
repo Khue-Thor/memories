@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { waterfall } from "../assets";
 import { HandThumbsUp, HandThumbsUpFill } from "react-bootstrap-icons";
-const Card = ({ card, onCardClick, onRemoveClick, onLikeClick }) => {
+import LikeChoicesModal from "./LikeChoicesModal";
+const Card = ({ card, onCardClick, onRemoveClick, onLikeClick, onLikeHover }) => {
   const [isLiked, setIsLiked] = useState(false);
   const handleLikeToggle = () => {
     setIsLiked(true);
@@ -27,8 +28,9 @@ const Card = ({ card, onCardClick, onRemoveClick, onLikeClick }) => {
         {isLiked ? (
           <HandThumbsUpFill className="w-7 h-7 mt-2 cursor-pointer" onClick={handleDisliked} />
         ) : (
-          <HandThumbsUp className="w-7 h-7 mt-2 cursor-pointer" onClick={handleLikeToggle} />
+          <HandThumbsUp className="w-7 h-7 mt-2 cursor-pointer" onClick={handleLikeToggle} onMouseOver={onLikeHover}/>
         )}
+       
       </div>
     </div>
   );

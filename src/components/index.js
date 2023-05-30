@@ -8,6 +8,7 @@ import ModalWithForm from './ModalWithForm';
 import EditProfileModal from './EditProfileModal';
 import CardAddModal from './CardAddModal';
 import CardModal from './CardModal';
+import LikeChoicesModal from './LikeChoicesModal';
 export {
   Header,
   Profile,
@@ -18,5 +19,6 @@ export {
   ModalWithForm,
   EditProfileModal,
   CardAddModal,
-  CardModal
+  CardModal,
+  LikeChoicesModal
 }
