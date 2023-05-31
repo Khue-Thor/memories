@@ -13,7 +13,7 @@ const Card = ({ card, onCardClick, onRemoveClick, onLikeClick, onLikeHover }) =>
   return (
     <div className="w-[320px] h-[430px] card rounded-xl overflow-hidden mb-5">
       <div className="h-[256px] relative cursor-pointer" onClick={onCardClick}>
-        <img src={waterfall} alt="" className="h-[310px] w-[320px]" />
+        <img src={card.imageurl} alt="" className="h-[310px] w-[320px]" />
         <div className="absolute top-3 left-3">
           <h3 className="text-xl">Mark</h3>
           <p>2 months</p>

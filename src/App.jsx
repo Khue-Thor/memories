@@ -18,6 +18,7 @@ const App = () => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isCardAddModalOpen, setIsCardAddModalOpen] = useState(false);
   const [isCardModalOpen, setIsCardModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [name, setName] = useState();
   const [card, setCard] = useState([])
 
@@ -68,6 +69,10 @@ const App = () => {
     };
   }, []);
 
+  function handleAddCardSubmit(title, ) {
+    setIsLoading(true);
+  }
+
   return (
     <div
       className={`${styles.padding} z-0 relative app black-gradient flex justify-start flex-col items-center`}
@@ -87,7 +92,7 @@ const App = () => {
       <StarsCanvas />
       <ToggleSwitch handleToggle={switchTheme} />
       {isEditModalOpen && <EditProfileModal onCloseModal={handleModalClose} />}
-      {isCardAddModalOpen && <CardAddModal onCloseModal={handleModalClose} />}
+      {isCardAddModalOpen && <CardAddModal onCloseModal={handleModalClose} onAddCard={handleAddCardSubmit}/>}
       {isCardModalOpen && <CardModal closeModal={handleModalClose} />}
     </div>
   );

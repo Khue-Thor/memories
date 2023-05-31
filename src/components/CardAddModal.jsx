@@ -53,6 +53,7 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard, isOpen }) => {
           id="name"
           minLength="1"
           maxLength="30"
+          onChange={handleTitleChange}
         />
 
         <label className="modal__label">Tags</label>
@@ -66,6 +67,7 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard, isOpen }) => {
           id="description"
           minLength="1"
           maxLength="30"
+          onChange={handleTagsChange}
         />
 
         <label className="modal__label">Description</label>
@@ -79,6 +81,7 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard, isOpen }) => {
           id="description"
           minLength="1"
           maxLength="200"
+          onChange={handleDescChange}
         />
 
         <label className="modal__label">Picture</label>
@@ -89,6 +92,7 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard, isOpen }) => {
           value={imageUrl}
           name="avatar"
           id="avatar"
+          onChange={handleImageChange}
         />
       </fieldset>
     </ModalWithForm>
