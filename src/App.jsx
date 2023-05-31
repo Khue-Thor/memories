@@ -88,7 +88,7 @@ const App = () => {
           desc={"Indain Model"}
           photo={profileimage}
         />
-        <Main onCardClick={handleCardModalOpen} card={card}/>
+        <Main onCardClick={handleCardModalOpen} cards={card}/>
       </div>
       <StarsCanvas />
       <ToggleSwitch handleToggle={switchTheme} />

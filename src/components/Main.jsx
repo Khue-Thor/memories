@@ -1,11 +1,15 @@
 import React from "react";
 import Card from "./Card";
 
-const Main = ({ card, onCardClick, onLikeHover }) => {
+const Main = ({ cards, onCardClick, onLikeHover }) => {
   return (
     <main className="m-4">
       <ul className="flex flex-wrap gap-4">
-        <Card card={card} onCardClick={onCardClick} key={card} onLikeHover={onLikeHover} />
+        {cards.map((card) => {
+          return (
+            <Card card={card} onCardClick={onCardClick} key={card._id} onLikeHover={onLikeHover} />
+          );
+        })}
       </ul>
     </main>
   );
