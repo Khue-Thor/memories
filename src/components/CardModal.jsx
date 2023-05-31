@@ -4,7 +4,7 @@ import { XCircleFill } from "react-bootstrap-icons";
 const CardModal = ({ title, desc, closeModal }) => {
   return (
     <div className="fixed top-0 left-0 right-0 bottom-0 bg-opacity-40 bg-black w-full flex justify-center items-center">
-      <div className="lg:w-[850px] lg:h-[640px] bg-red-500 card flex overflow-hidden rounded-xl relative">
+      <div className="lg:w-[850px] lg:h-[640px] bg-red-500 card item-modal flex overflow-hidden rounded-xl relative">
         <button className="absolute top-[10px] left-[10px]" type="button" onClick={closeModal}>
           <XCircleFill className="w-5 h-5" />
         </button>

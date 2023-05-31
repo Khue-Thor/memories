@@ -19,6 +19,7 @@ const App = () => {
   const [isCardAddModalOpen, setIsCardAddModalOpen] = useState(false);
   const [isCardModalOpen, setIsCardModalOpen] = useState(false);
   const [name, setName] = useState();
+  const [card, setCard] = useState([])
 
   const handleEditModalOpen = () => {
     setIsEditModalOpen(true);
@@ -56,7 +57,7 @@ const App = () => {
 
   useEffect(() => {
     function handleOverlayClose(e) {
-      if (!e.target.closest(".card")) {
+      if (!e.target.closest(".item-modal")) {
         handleModalClose();
       }
     }
@@ -81,7 +82,7 @@ const App = () => {
           desc={"Indain Model"}
           photo={profileimage}
         />
-        <Main onCardClick={handleCardModalOpen} />
+        <Main onCardClick={handleCardModalOpen} card={card}/>
       </div>
       <StarsCanvas />
       <ToggleSwitch handleToggle={switchTheme} />

@@ -20,8 +20,8 @@ const Card = ({ card, onCardClick, onRemoveClick, onLikeClick, onLikeHover }) =>
         </div>
       </div>
       <div className="mt-[70px] ml-2 relative">
-        <h2 className=" text-3xl">Waterfall</h2>
-        <p>#waterfall</p>
+        <h2 className=" text-3xl">{card.title}</h2>
+        <p>{card.tag}</p>
         <div className="flex justify-between">
           <button className="like-bg"></button>
         </div>
