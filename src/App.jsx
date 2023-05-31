@@ -69,8 +69,9 @@ const App = () => {
     };
   }, []);
 
-  function handleAddCardSubmit(title, ) {
+  function handleAddCardSubmit(title, tag, desc, imageUrl) {
     setIsLoading(true);
+    setCard({title, tag, desc, imageUrl})
   }
 
   return (
