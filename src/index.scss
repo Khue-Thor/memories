@@ -8,6 +8,11 @@ $slate-900: #07072c;
   background-color: #b6b6b6;
 }
 
+.autocomplete {
+  border: none; /* Remove the border */
+  outline: none; /* Remove the outline when focused */
+}
+
 .toggleswitch__container {
   position: relative;
   width: 32px;

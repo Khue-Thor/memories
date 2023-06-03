@@ -36,7 +36,7 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard, isOpen }) => {
   return (
     <ModalWithForm
       title="Add Memories"
-      buttonText={isLoading ? "Saving..." : "Save Change"}
+      buttonText={isLoading ? "Posting..." : "Start Posting"}
       closeModal={onCloseModal}
       onSubmit={handleSubmit}
       onAddCard={onAddCard}
