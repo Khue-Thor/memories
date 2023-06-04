@@ -72,16 +72,9 @@ const App = () => {
   function handleAddCardSubmit(data) {
     setIsLoading(true);
     setCard([...card, data])
+    handleModalClose()
+    setIsLoading(false)
   }
-
-  const nft = [
-    "Bored Ape Nike Club",
-    "Dragon Stinky",
-    "The King of Kind",
-    "Ape the knight",
-    "Drinking bady",
-    "Bored Ape Yacht Club",
-  ];
 
 const contracts =  [
   {

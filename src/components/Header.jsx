@@ -24,20 +24,10 @@ const Header = ({ placeholder, data }) => {
     setEnteredWord([]);
   };
 
-  const options = { method: "GET", headers: { accept: "application/json" } };
-
-  const info = fetch(
-    "https://eth-mainnet.g.alchemy.com/nft/v3/fLv6BJTV_rOh-iPeRKotoPrgwf_ff2Lt/searchContractMetadata?query=bored",
-    options
-  )
-    .then((response) => response.json())
-    .then((response) => console.log(response))
-    .catch((err) => console.error(err));
-
   return (
-    <div className="border-b-[1px] border-white ml-5 mr-5 pb-5 pt-5 header flex">
+    <div className="border-b-[1px] border-white ml-5 mr-5 pb-5 pt-5 header flex gap-10">
       <img src={logo} alt="logo" className="xl:min-w-[250px] hover:cursor-pointer" />
-      <div className="relative">
+      <div className="relative flex items-end">
         <div className="relative z-20">
           <input
             type="text"
