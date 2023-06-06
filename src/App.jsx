@@ -14,7 +14,7 @@ import useLocalStorage from "use-local-storage";
 import { profileimage } from "./assets";
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useLocalStorage("theme" ? "dark" : "light");
+  const [currentTheme, setCurrentTheme] = useLocalStorage("theme", "dark");
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isCardAddModalOpen, setIsCardAddModalOpen] = useState(false);
   const [isCardModalOpen, setIsCardModalOpen] = useState(false);
@@ -69,9 +69,10 @@ const App = () => {
   }, []);
 
   function handleAddCardSubmit(data) {
+    const { title, imageUrl, tag } = data;
     setIsLoading(true);
-    setCard([data]);
-    console.log(card)
+    setCard([...card, { title, imageUrl, tag }]);
+    console.log();
     handleModalClose();
     setIsLoading(false);
   }
@@ -520,10 +521,7 @@ const App = () => {
   const [avatar, setAvatar] = useState("");
   const [desc, setDesc] = useState("");
 
-  const handleEditProfile = (e) => {
-    
-  }
-
+  const handleEditProfile = (e) => {};
 
   return (
     <div
@@ -543,7 +541,9 @@ const App = () => {
       </div>
       <StarsCanvas />
       <ToggleSwitch handleToggle={switchTheme} />
-      {isEditModalOpen && <EditProfileModal onCloseModal={handleModalClose} onEditProfile={handleEditProfile}/>}
+      {isEditModalOpen && (
+        <EditProfileModal onCloseModal={handleModalClose} onEditProfile={handleEditProfile} />
+      )}
       {isCardAddModalOpen && (
         <CardAddModal
           onCloseModal={handleModalClose}

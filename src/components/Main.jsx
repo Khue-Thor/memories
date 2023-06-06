@@ -7,7 +7,7 @@ const Main = ({ cards, onCardClick, onLikeHover }) => {
       <ul className="flex flex-wrap gap-4">
         {cards.map((card) => {
           return (
-            <Card card={card} onCardClick={onCardClick} key={card._id} onLikeHover={onLikeHover} />
+            <Card card={card} onCardClick={onCardClick} key={card.id} onLikeHover={onLikeHover} />
           );
         })}
       </ul>

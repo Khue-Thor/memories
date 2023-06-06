@@ -2,28 +2,28 @@ import React, { useState, useEffect, useContext } from "react";
 import ModalWithForm from "./ModalWithForm";
 
 const CardAddModal = ({ isLoading, onCloseModal, onAddCard, isOpen }) => {
-  const [cardTitle, setCardTitle] = useState("");
-  const [cardTags, setCardTags] = useState("");
-  const [cardDesc, setCardDesc] = useState("");
+  const [title, setTitle] = useState("");
+  const [tag, setTag] = useState("");
+  const [desc, setDesc] = useState("");
   const [imageUrl, setImageUrl] = useState("");
 
   useEffect(() => {
-    setCardTitle("");
-    setCardTags("");
-    setCardDesc("");
+    setTitle("");
+    setTag("");
+    setDesc("");
     setImageUrl("");
   }, [isOpen]);
 
   function handleTitleChange(e) {
-    setCardTitle(e.target.value);
+    setTitle(e.target.value);
   }
 
   function handleTagsChange(e) {
-    setCardTags(e.target.value);
+    setTag(e.target.value);
   }
 
   function handleDescChange(e) {
-    setCardDesc(e.target.value);
+    setDesc(e.target.value);
   }
 
   function handleImageChange(e) {
@@ -31,7 +31,7 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard, isOpen }) => {
   }
 
   function handleSubmit() {
-    onAddCard(cardTitle, cardTags, cardDesc, imageUrl);
+    onAddCard(title, tag, desc, imageUrl);
   }
   return (
     <ModalWithForm
@@ -48,7 +48,7 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard, isOpen }) => {
           placeholder="Card Title"
           className="modal__input mb-5 p-1"
           required
-          value={cardTitle}
+          value={title}
           name="name"
           id="name"
           minLength="1"
@@ -62,7 +62,7 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard, isOpen }) => {
           placeholder="Tags"
           className="modal__input mb-5 p-1"
           required
-          value={cardTags}
+          value={tag}
           name="description"
           id="description"
           minLength="1"
@@ -76,7 +76,7 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard, isOpen }) => {
           placeholder="Description"
           className="modal__input mb-5 p-1"
           required
-          value={cardDesc}
+          value={desc}
           name="description"
           id="description"
           minLength="1"
