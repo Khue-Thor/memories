@@ -14,15 +14,23 @@ const Login = () => {
 
   return (
     <div className="relative">
-      <div className="w-[400px] bg-slate-400 flex flex-col items-center gap-2 p-3 rrounded-lg">
+      <div className="w-[400px] bg-slate-400 flex flex-col gap-2 p-3 rounded-lg">
+        <span className="m-0 p-0">Email:</span>
         <input
-          className="w-[350px] bg-none text-black"
+          className="w-[350px] bg-none text-black bg-slate-400 border-b-2"
           value={userName}
           onChange={handleNameLogin}
         />
-        <input className="w-[350px] text-black" value={password} onChange={handlePassLogin} />
-        <button className="w-[200px] bg-red-200">Login</button>
-        <p>New user!</p>
+        <span>Password:</span>
+        <input
+          className="w-[350px] bg-slate-400 text-black border-b-2"
+          value={password}
+          onChange={handlePassLogin}
+        />
+        <button className="w-[150px] bg-red-200 hover:bg-red-300 rounded-lg pt-1 pb-1 font-bold">
+          Login
+        </button>
+        <p className="hover:text-blue-300 hover:cursor-pointer">New user!</p>
       </div>
     </div>
   );
