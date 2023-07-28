@@ -109,6 +109,7 @@ $slate-900: #07072c;
   --background-secondary: #ffffff;
   --background-profile: #f0f1f4;
   --background-card: #fafafa;
+  --background-card-input: #dde1e4;
   --border-color: $slate-900;
   --box-shadow: rgba(0, 0, 0, 0.3);
   --text-primary: $black-100;
@@ -119,6 +120,7 @@ $slate-900: #07072c;
   --background-secondary: #07132b;
   --background-profile: #213e59;
   --background-card: #44525f;
+  --background-card-input: #303941;
   --border-color: #fff;
   --box-shadow: rgba(11, 62, 105, 0.3);
   --text-primary: #fff;
@@ -160,11 +162,15 @@ $slate-900: #07072c;
 
 .modal__input {
   background: none;
-  background-color: #303941;
+  background-color: var(--background-card-input);
   border-radius: 5px;
 }
 
 .modal__label {
   font-weight: bold;
   margin: 0 0 3px 0;
+}
+
+.modal__form-save {
+  background-color: var(--background-card-input);
 }

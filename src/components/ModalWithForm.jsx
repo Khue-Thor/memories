@@ -20,7 +20,7 @@ function ModalWithForm({ title, name, buttonText, closeModal, onSubmit, children
           {children}
           <button
             type="submit"
-            className="modal__form-save w-[120px] bg-gray-800 p-2 rounded-xl font-medium"
+            className="modal__form-save w-[120px] p-2 rounded-xl font-medium"
           >
             {buttonText}
           </button>
