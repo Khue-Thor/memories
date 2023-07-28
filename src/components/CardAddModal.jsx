@@ -46,7 +46,7 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard, isOpen }) => {
         <input
           type="text"
           placeholder="Card Title"
-          className="modal__input mb-5 p-1"
+          className="modal__input mb-3 p-1 outline-0"
           required
           value={title}
           name="name"
@@ -60,7 +60,7 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard, isOpen }) => {
         <input
           type="text"
           placeholder="Tags"
-          className="modal__input mb-5 p-1"
+          className="modal__input mb-3 p-1 outline-0"
           required
           value={tag}
           name="description"
@@ -74,7 +74,7 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard, isOpen }) => {
         <input
           type="text"
           placeholder="Description"
-          className="modal__input mb-5 p-1"
+          className="modal__input mb-3 p-1 outline-0"
           required
           value={desc}
           name="description"
@@ -88,7 +88,7 @@ const CardAddModal = ({ isLoading, onCloseModal, onAddCard, isOpen }) => {
         <input
           type="url"
           placeholder="Picture URL"
-          className="modal__input p-1 mb-5"
+          className="modal__input p-1 mb-3 outline-0"
           value={imageUrl}
           name="avatar"
           id="avatar"
